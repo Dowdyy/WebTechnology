@@ -241,6 +241,17 @@ html{
             color: var(--muted);
             max-width: 470px;
         }
+        .footer {
+            border-top: 1px solid #dcd9d3;
+            padding: 20px 0;
+            font-size: 13px;
+        }
+
+        .footer .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
 @media (max-width: 760px) {
     .site-header { align-items: flex-start; flex-direction: column; }
@@ -276,7 +287,7 @@ html{
 }
 .tags{
     font: 10px 'DM Mono',monospace;
-    letter-spacing: 5px;
+    letter-spacing: 3px;
 }
 .author{
     font-size: 10px;
