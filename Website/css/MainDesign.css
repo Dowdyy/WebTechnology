@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+/* Root variables for consistent theming */
+:root{
+    --ink:#17191b;
+    --muted:#74797a;
+    --paper:#f3f1ed;
+    --line:#d8d6d0;
+    --accent:#ff4545;
+    --artist:#596d83
+}
+
+/* This * makes the entire site have a box feel to it. */
+*{
+    box-sizing:border-box
+}
+/* Changes the scroll speed so that it's smooth */
+html{
+    scroll-behavior:smooth
+}
+
+    body{
+        margin:0;
+        background:var(--paper);
+        color:var(--ink);
+        font:15px/1.7 Manrope,Arial,sans-serif
+    }
+
+    /* Changes the site header to have a consistent look and feel */
+    .site-header{
+        min-height:80px;
+        padding:17px 6%;
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        gap:22px;
+        border-bottom:1px solid var(--line)
+    }
+
+        .WebIcon{
+            display:flex;
+            align-items:center;
+            gap:20px;
+            text-decoration:none;
+            color:var(--ink);
+            font-weight:600;
+            font-size:20px
+        }
+
+        .WebIcon b{
+            display: grid;
+            place-items: center;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: var(--ink);
+            color: var(--accent);
+            font: 20px Georgia, serif;
+        }
+
+            .site-header nav{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+            .site-header nav a{
+                color: var(--muted);
+                text-decoration: none;
+                font-size: 11px;
+            }
+
+            .site-header nav a:hover, .site-header nav a.active {
+                color: var(--ink);
+                font-weight: 800;
+            }
+        
+
+        .Artist{
+            min-height: 450px;
+            padding: 70px 9%;
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            align-items: center;
+            gap: 5%;
+            overflow: hidden;
+        }
+
+        /* This sets the normal weight of the font to 400, the clamp changes it so that it cant go below 55px or above 90px and tries to stay at 7% of the width of the view of the browser. the em scales with the font size */
+        .Artist h1 {
+            font:400 clamp(55px,7vw,90px)/1.05 Georgia,serif;
+            letter-spacing: -0.06em;
+            margin: 0 0 22px;
+
+        }
+
+        .Artist h1 i {
+            color: #838c84;
+        }
+
+        .small-text{
+            font: 10px 'DM Mono', monospace;
+            letter-spacing: 1px;
+            color: var(--muted);
+            margin: 0 0 16px;
+        }
+
+        .other-small-text{
+            max-width: 520px;
+            color: var(--muted);
+            line-height: 2;
+        }
+
+        .button{
+            display: inline-flex;
+            gap: 20px;
+            align-items: center;
+            padding: 12px 17px;
+            border:0;
+            background: var(--ink);
+            color: white;
+            text-decoration: none;
+            font: 600 11px Manrope,Arial,sans-serif;
+            cursor: pointer;
+
+        }
+        .button:hover{
+            background: var(--muted);
+        }
+        .button b{
+            color: var(--accent);
+            font-size: 17px;
+        }
+        .record{
+                width:min(290px,65vw);
+                aspect-ratio:1;
+                border-radius:50%;
+                margin:auto;display:grid;
+                place-items:center;
+                background:repeating-radial-gradient(circle,#262b2d 0 2px,#414749 3px 4px,#202425 5px 7px);
+                box-shadow:0 25px 40px #1113
+        }
+        .record span {
+                color: white;
+                display:grid;
+                place-items:center;
+                width:34%;
+                aspect-ratio:1;
+                border-radius:50%;
+                background:var(--accent);
+                font:10px/1.6 'DM Mono',monospace;
+                text-align:center
+        }
+        .Intro{
+            padding: 19px 9%;
+            background: var(--accent);
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            font-size: 12px;
+
+        }
+        .Intro b, .Intro small{
+            font: 10px 'DM Mono', monospace;
+            white-space: nowrap;
+        }
+        .Intro small{
+            margin-left: auto;
+        }
+        .section{
+            padding:74px 9% 88px;
+        }
+        .section h2,.about h2,.interaction h2{
+            font:400 clamp(32px,4vw,47px)/1.1 Georgia,serif;
+            letter-spacing:  -0.04em;
+            margin: 0 0 27px;
+        }
+        .grid{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 14px;
+
+        }
+        .card{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            min-height: 315px;
+            padding: 16px;
+            overflow: hidden;
+            color: white;
+            text-decoration: none;
+            background: #252a2c;
+            transition: transform .25s;
+        }
+        .card img{
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform .3s;
+        }
+        .card:hover{
+            transform: translateY(-4px);
+        }
+        .card:after {
+            pointer-events: none;
+            content: " ";
+            position:absolute;
+            inset: 0;
+            background: linear-gradient(180deg, #0001 20%,#000c 100%);
+        }
+        .card small, .card strong,.card span {
+            z-index: 1;
+        }
+        .card small{
+            font: 9px 'DM Mono',monospace;
+        }
+        .card strong{
+            margin-top: auto;
+            font: 400 clamp(25px, 3vw, 36px)/1.1 Georgia,serif;
+        }
+        .card span{
+            font-size: 10px;
+            color: white;
+        }
+        .about{
+            padding: 48px 9%;
+            background: #e8e6df;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 9%;
+        }
+        .about h2 {
+            margin: 0;
+
+        }
+        .about p {
+            color: var(--muted);
+            max-width: 470px;
+        }
+
+@media (max-width: 760px) {
+    .site-header { align-items: flex-start; flex-direction: column; }
+    .Artist { grid-template-columns: 1fr; padding: 48px 7%; }
+    .record { width: min(230px, 65vw); margin-top: 20px; }
+    .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .card { min-height: 260px; }
+    .section, .Intro, .about { padding-left: 7%; padding-right: 7%; }
+}
+@media (max-width: 480px) {
+    .site-header nav { flex-wrap: wrap; gap: 10px 14px; }
+    .grid { grid-template-columns: 1fr; }
+    .card { min-height: 300px; }
+    .Intro { flex-wrap: wrap; gap: 10px 16px; }
+    .Intro small { margin-left: 0; }
+    .about { grid-template-columns: 1fr; }
+}
+
+.nf-theme{
+    
+}
+.artist-link{
+    grid: 50%;
+
+}
