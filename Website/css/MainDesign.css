@@ -241,17 +241,6 @@ html{
             color: var(--muted);
             max-width: 470px;
         }
-        .footer {
-            border-top: 1px solid #dcd9d3;
-            padding: 20px 0;
-            font-size: 13px;
-        }
-
-        .footer .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
 
 @media (max-width: 760px) {
     .site-header { align-items: flex-start; flex-direction: column; }
@@ -271,34 +260,9 @@ html{
 }
 
 .nf-theme{
-    --artist: #496a91;
-    --artist-soft: #ele9f2
-}
-.Profile-artist h1{
-    font-size: clamp(58px,8vw,100px);
-    margin-bottom: 17px;
-}
-.Profile-artist em{
-    color: var(--artist);
-    font-style: normal;
-}
-.Profile-artist, .small-text{
-    font: italic 20px/1.5 Georgia,serif;
-}
-.tags{
-    font: 10px 'DM Mono',monospace;
-    letter-spacing: 3px;
-}
-.author{
-    font-size: 10px;
-    color: #777;
-    margin-top: 25px;
-}
-.author strong{
-    color: var(--ink);
+    
 }
 .artist-link{
-    position:relative;
-    display: block;
-    background: #222;
+    grid: 50%;
+
 }
