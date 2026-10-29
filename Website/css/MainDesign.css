@@ -260,9 +260,34 @@ html{
 }
 
 .nf-theme{
-    
+    --artist: #496a91;
+    --artist-soft: #ele9f2
+}
+.Profile-artist h1{
+    font-size: clamp(58px,8vw,100px);
+    margin-bottom: 17px;
+}
+.Profile-artist em{
+    color: var(--artist);
+    font-style: normal;
+}
+.Profile-artist, .small-text{
+    font: italic 20px/1.5 Georgia,serif;
+}
+.tags{
+    font: 10px 'DM Mono',monospace;
+    letter-spacing: 5px;
+}
+.author{
+    font-size: 10px;
+    color: #777;
+    margin-top: 25px;
+}
+.author strong{
+    color: var(--ink);
 }
 .artist-link{
-    grid: 50%;
-
+    position:relative;
+    display: block;
+    background: #222;
 }
