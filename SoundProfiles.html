@@ -8,6 +8,8 @@
         <title>Sound Profiles - Four artists, Four Worlds</title>
         <link rel="icon" type="image/jpeg" href="Website/Images/MusicIcon.jpg">
         
+        <!-- Bootstrap is loaded first so the styles in MainDesign.css can override it. -->
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="Website/css/MainDesign.css">
 
     </head>
@@ -82,19 +84,16 @@
 
             </section>
         </main>
-        <footer class="grid">
-            <a class="WebIcon" href="SoundProfiles.html">
-                <b>S.</b> Sound Profiles
+    <footer class="footer">
+        <div class="container">
+            <a href="SoundProfiles.html" class="WebIcon">
+                <span class="logo-circle">S</span>
+                Sound Profiles
             </a>
-            <span> Created by Ethan</span>
-        </footer>
+                <span>Created by Ethan</span>
+        </div>
+  </footer>
 
-
-
-
-
-
-
-
+        <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     </body>
 </html>
