@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+
+
+
+
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
@@ -17,14 +21,26 @@ h1, h2, h3 {
   margin: 0 0 12px 0;
 }
 
+
+
+
+
+
 h1 { font-size: 64px; line-height: 1.1; }
 h2 { font-size: 38px; }
 h3 { font-size: 24px; }
+
+
+
+
 
 img {
   max-width: 100%;
   display: block;
 }
+
+
+
 
 a {
   color: inherit;
@@ -58,6 +74,10 @@ a {
 }
 
 
+
+
+
+
 .logo-circle {
   width: 28px;
   height: 28px;
@@ -69,6 +89,10 @@ a {
   font-weight: bold;
 }
 
+
+
+
+
 .navbar a {
   margin-left: 18px;
   font-size: 13px;
@@ -78,6 +102,9 @@ a {
 .navbar a:hover {
   color: #ff4545;
 }
+
+
+
 
 .navbar a.active {
   color: #1c1c1c;
@@ -96,6 +123,8 @@ a {
   object-fit: cover;
   margin-bottom: 25px;
 }
+
+
 
 .subtitle {
   font-family: Georgia, "Times New Roman", serif;
@@ -117,7 +146,9 @@ a {
 
 
 .section {
-  padding: 50px 0;
+  
+
+    padding: 50px 0;
 }
 
 .section p {
@@ -127,6 +158,7 @@ a {
 
 .two-columns {
   display: flex;
+  
   gap: 40px;
   align-items: center;
 }
@@ -149,7 +181,11 @@ a {
 
 .cards {
   display: flex;
+  
   flex-wrap: wrap;
+
+
+
   gap: 20px;
   margin-top: 25px;
 }
@@ -161,20 +197,32 @@ a {
   width: calc(33.33% - 14px);
 }
 
+
+
+
+
 .card h3 {
   font-size: 22px;
 }
 
 .card p {
   font-size: 14px;
+
   margin: 0;
 }
+
+
 
 .card .small {
   color: #7d877d;
   font-size: 13px;
   margin-bottom: 8px;
 }
+
+
+
+
+
 
 .album-cover {
   width: 100%;
